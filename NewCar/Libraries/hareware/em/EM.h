@@ -39,7 +39,7 @@ void EM_get(void);
 void EM_dectect(void);
 float PID_Direction_Pos_Neg(PID_t * pid,float newE_k);
 void Round_Detect(void);
-
+extern uint16 curve_flag;
 #endif
 
 

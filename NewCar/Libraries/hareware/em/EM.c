@@ -63,6 +63,19 @@ void EM_init()
 
 }
 
+void EM_trend()
+{
+	int i;int em_hight2low=0;
+	for(i=0;i<6;i++)
+	{
+		if(EM_mid[i]<200)
+			em_hight2low++;
+		if(em_hight2low>4)
+			curve_flag=0;
+			
+		
+	}
+}
 void EM_dectect()
 {
 	EM_get();
@@ -77,7 +90,7 @@ void EM_dectect()
 		if(PWM_Direction<-ELE_Angle_max_out)
 			PWM_Direction=-ELE_Angle_max_out;
 		
-	if(EM_left_value<EM_right_value && PWM_Direction>-50)//PWM_Direction为负
+	if(EM_left_value<EM_right_value &&EM_right_value<=210&& PWM_Direction>-50)//PWM_Direction为负
 	{
 		Motor12_speed(STRAIGHT_INIT_SPEED-PWM_Direction,0);
 		Motor34_speed(STRAIGHT_INIT_SPEED+2*PWM_Direction,0);
@@ -109,14 +122,19 @@ void EM_dectect()
 	
 void Round_Detect()
 {
-	if(EM_left_value>275||EM_mid_value>275||EM_right_value>275)
+	OLED_Print_Num1(60,1,g_curve_count);//用于调试
+	if(EM_mid_value>250)
 	{
 		g_curve_count++;
-		if(g_curve_count>30&&g_curve_count<60)
+		if(g_curve_count>10&&g_curve_count<50)
 		{
+			systick_delay_ms(7);
 			Motor12_speed(STRAIGHT_INIT_SPEED+200,0);
 		  Motor34_speed(STRAIGHT_INIT_SPEED-200,0);
 			curve_flag=1;
+			//if(g_curve_count>40)EM_trend();
+			
+			
 		}
 		else
 			curve_flag=0;

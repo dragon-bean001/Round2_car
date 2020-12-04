@@ -55,7 +55,7 @@ int main(void)
 	OLED_Init();   
 	EM_init();
 	Key_init();
-	ELE_PID_Direction.KpPos=2.0f;
+	ELE_PID_Direction.KpPos=3.0f;
 	ELE_PID_Direction.KdPos=1.0f;
    while(1)
 	 {
@@ -64,8 +64,9 @@ int main(void)
 		 Key_select();
 		 
 		 //systick_delay_ms(100);
-		 EM_dectect();
 		 Round_Detect();
+		 if(!curve_flag)EM_dectect();
+		 
 		 
 	 }
  }

@@ -39,7 +39,10 @@ void EM_get(void);
 void EM_dectect(void);
 float PID_Direction_Pos_Neg(PID_t * pid,float newE_k);
 void Round_Detect(void);
+void EM_mid_value_trend(void);
 extern uint16 curve_flag;
+extern uint16 have_enter_curve;//已经进入环岛的标志
+
 #endif
 
 

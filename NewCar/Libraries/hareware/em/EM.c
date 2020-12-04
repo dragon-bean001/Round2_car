@@ -16,6 +16,29 @@ PID_t ELE_PID_Direction;//电感的PID决策
 #define CURVE_INIT_SPEED 1500 //直道初始速度
 uint16 g_curve_count=0;//进入环岛时的计数
 uint16 curve_flag=0;//进入圆环的标志
+uint16 have_enter_curve=0;//已经进入环岛的标志
+int g_EM_mid_value_list[6]={0};//用来存放连续的6个中间EM_mid_value,用来判断趋势
+
+void EM_mid_value_trend()//判断中间电感值的趋势变化
+{
+	int i,j,down_trend=0;
+	
+	for(i=0;i<5;i++)
+	{
+		g_EM_mid_value_list[i]=g_EM_mid_value_list[i+1];//滑动更新这个趋势数组
+		
+	}
+	g_EM_mid_value_list[5]=EM_mid_value;
+	for(j=0;j<5;j++)
+	{
+		if((g_EM_mid_value_list[i]>g_EM_mid_value_list[i+1])&&(EM_mid_value>=200))
+			down_trend++;
+	}
+	if(down_trend>4)
+		curve_flag=1;//圆环的标志位
+	  have_enter_curve=1;
+		
+}
 void EM_get()
 {
 	EM_right[smoothing_num] =adc_once(ADC1_SE12, ADC_8bit);  //右
@@ -122,27 +145,21 @@ void EM_dectect()
 	
 void Round_Detect()
 {
-	OLED_Print_Num1(60,1,g_curve_count);//用于调试
-	if(EM_mid_value>250)
+	int i;
+	EM_mid_value_trend();
+	if(curve_flag)
+		OLED_Print_Num1(60,1,curve_flag);//用于调试
+	
+	if(curve_flag)
 	{
-		g_curve_count++;
-		if(g_curve_count>10&&g_curve_count<50)
-		{
-			systick_delay_ms(7);
-			Motor12_speed(STRAIGHT_INIT_SPEED+200,0);
-		  Motor34_speed(STRAIGHT_INIT_SPEED-200,0);
-			curve_flag=1;
-			//if(g_curve_count>40)EM_trend();
-			
-			
-		}
-		else
-			curve_flag=0;
 		
+		Motor12_speed(STRAIGHT_INIT_SPEED+150,0);
+    Motor34_speed(STRAIGHT_INIT_SPEED-50,0);
+		systick_delay_ms(1300);
+		curve_flag=0;
 		
 	}
 	
-		
 }
 
 

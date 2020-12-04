@@ -64,7 +64,7 @@ int main(void)
 		 Key_select();
 		 
 		 //systick_delay_ms(100);
-		 Round_Detect();
+		 if(have_enter_curve==0)Round_Detect();
 		 if(!curve_flag)EM_dectect();
 		 
 		 

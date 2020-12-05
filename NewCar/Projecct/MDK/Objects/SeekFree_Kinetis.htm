@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\SeekFree_Kinetis.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\SeekFree_Kinetis.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Dec 04 20:12:33 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Dec 05 14:46:20 2020
 <BR><P>
 <H3>Maximum Stack Usage =        156 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; EM_dectect &rArr; EM_store &rArr; OLED_Print_float &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
+main &rArr; EM_dectect &rArr; EM_store &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 <P>
 <H3>
 Mutually Recursive functions
@@ -656,7 +656,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[84]"></a>EM_dectect</STRONG> (Thumb, 616 bytes, Stack size 32 bytes, em.o(i.EM_dectect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = EM_dectect &rArr; EM_store &rArr; OLED_Print_float &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
+<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = EM_dectect &rArr; EM_store &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_store
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_get
@@ -683,7 +683,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8c]"></a>EM_init</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, em.o(i.EM_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = EM_init &rArr; EM_store &rArr; OLED_Print_float &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = EM_init &rArr; EM_store &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_init
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_store
@@ -691,18 +691,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a7]"></a>EM_mid_value_trend</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, em.o(i.EM_mid_value_trend))
+<P><STRONG><a name="[a7]"></a>EM_mid_value_trend</STRONG> (Thumb, 96 bytes, Stack size 12 bytes, em.o(i.EM_mid_value_trend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = EM_mid_value_trend
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Round_Detect
 </UL>
 
 <P><STRONG><a name="[86]"></a>EM_store</STRONG> (Thumb, 492 bytes, Stack size 8 bytes, em.o(i.EM_store))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = EM_store &rArr; OLED_Print_float &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = EM_store &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_get
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_get
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_float
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_init
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_dectect
@@ -801,8 +801,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WrDat
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Set_Pos
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_float
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_float
 </UL>
 
 <P><STRONG><a name="[8e]"></a>OLED_Print_Num1</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, seekfree_oled.o(i.OLED_Print_Num1))
@@ -814,6 +814,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Round_Detect
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_select
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_store
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[8f]"></a>OLED_Print_float</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, seekfree_oled.o(i.OLED_Print_float))
@@ -889,8 +890,8 @@ Global Symbols
 <P><STRONG><a name="[a6]"></a>Round_Detect</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, em.o(i.Round_Detect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = Round_Detect &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_delay_ms
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_delay_ms
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor34_speed
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor12_speed
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EM_mid_value_trend
@@ -1032,12 +1033,13 @@ Global Symbols
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[6f]"></a>main</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = main &rArr; EM_dectect &rArr; EM_store &rArr; OLED_Print_float &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
+<P><STRONG><a name="[6f]"></a>main</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = main &rArr; EM_dectect &rArr; EM_store &rArr; OLED_Print_Num1 &rArr; OLED_P6x8Str &rArr; OLED_Set_Pos &rArr; OLED_WrCmd &rArr; gpio_set
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_clk
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Round_Detect
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Print_Num1
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor_init
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_select

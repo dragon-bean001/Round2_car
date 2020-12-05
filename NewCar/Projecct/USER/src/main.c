@@ -64,8 +64,15 @@ int main(void)
 		 Key_select();
 		 
 		 //systick_delay_ms(100);
-		 if(have_enter_curve==0)Round_Detect();
-		 if(!curve_flag)EM_dectect();
+		 if(have_enter_curve)OLED_Print_Num1(60,3,have_enter_curve);
+		 if(!have_enter_curve)
+		 {
+			 Round_Detect();
+		 }
+			if(!curve_flag)
+			{
+				EM_dectect();
+			}
 		 
 		 
 	 }

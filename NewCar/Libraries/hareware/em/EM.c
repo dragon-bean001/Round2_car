@@ -31,13 +31,14 @@ void EM_mid_value_trend()//判断中间电感值的趋势变化
 	g_EM_mid_value_list[5]=EM_mid_value;
 	for(j=0;j<5;j++)
 	{
-		if((g_EM_mid_value_list[i]>g_EM_mid_value_list[i+1])&&(EM_mid_value>=200))
+		if((g_EM_mid_value_list[i]>g_EM_mid_value_list[i+1])&&(EM_mid_value<240)&&(EM_mid_value>200))
 			down_trend++;
 	}
 	if(down_trend>4)
+	{
 		curve_flag=1;//圆环的标志位
 	  have_enter_curve=1;
-		
+	}	
 }
 void EM_get()
 {
@@ -86,19 +87,7 @@ void EM_init()
 
 }
 
-void EM_trend()
-{
-	int i;int em_hight2low=0;
-	for(i=0;i<6;i++)
-	{
-		if(EM_mid[i]<200)
-			em_hight2low++;
-		if(em_hight2low>4)
-			curve_flag=0;
-			
-		
-	}
-}
+
 void EM_dectect()
 {
 	EM_get();
@@ -154,9 +143,10 @@ void Round_Detect()
 	{
 		
 		Motor12_speed(STRAIGHT_INIT_SPEED+150,0);
-    Motor34_speed(STRAIGHT_INIT_SPEED-50,0);
-		systick_delay_ms(1300);
+    Motor34_speed(STRAIGHT_INIT_SPEED-150,0);
+		systick_delay_ms(1000);
 		curve_flag=0;
+		
 		
 	}
 	

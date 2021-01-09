@@ -43,6 +43,8 @@ void EM_mid_value_trend(void);
 extern uint16 curve_flag;
 extern uint16 have_enter_curve;//已经进入环岛的标志
 
+extern uint16 g_right_flag;
+
 #endif
 
 

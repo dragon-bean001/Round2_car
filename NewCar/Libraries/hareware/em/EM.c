@@ -19,6 +19,7 @@ uint16 curve_flag=0;//进入圆环的标志
 uint16 have_enter_curve=0;//已经进入环岛的标志
 int g_EM_mid_value_list[6]={0};//用来存放连续的6个中间EM_mid_value,用来判断趋势
 
+uint16 g_right_flag=0;//右入环
 void EM_mid_value_trend()//判断中间电感值的趋势变化
 {
 	int i,j,down_trend=0;
@@ -73,8 +74,8 @@ void EM_store()
 		 OLED_Print_Num1(5,5,EM_right_value);
 		 OLED_Print_Num1(5,7,PWM_Direction);//x=40便可以分开了
 	   
-		 OLED_Print_float(60,5,ELE_PID_Direction.KpPos);
-	   OLED_Print_float(60,7,ELE_PID_Direction.KdPos); 
+		 //OLED_Print_float(60,5,ELE_PID_Direction.KpPos);
+	   //OLED_Print_float(60,7,ELE_PID_Direction.KdPos); 
 }
 
 void EM_init()
@@ -141,10 +142,22 @@ void Round_Detect()
 	
 	if(curve_flag)
 	{
-		systick_delay_ms(200);
-		Motor12_speed(STRAIGHT_INIT_SPEED+200,0);
-    Motor34_speed(STRAIGHT_INIT_SPEED-200,0);
-		systick_delay_ms(1000);
+		
+		if(g_right_flag)
+		{
+				systick_delay_ms(200);
+				Motor12_speed(STRAIGHT_INIT_SPEED+200,0);
+				Motor34_speed(STRAIGHT_INIT_SPEED-200,0);
+				systick_delay_ms(1000);
+		}
+		else
+		{
+				systick_delay_ms(200);
+				Motor12_speed(STRAIGHT_INIT_SPEED-200,0);
+				Motor34_speed(STRAIGHT_INIT_SPEED+200,0);
+				systick_delay_ms(1000);
+		}
+		
 		curve_flag=0;
 		
 		

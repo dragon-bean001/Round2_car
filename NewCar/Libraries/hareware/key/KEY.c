@@ -19,6 +19,7 @@ void Key_init(void)//按键初始化
 
 void Key_select(void)
 {
+	unsigned char a[]="dir";
 	if(key_interrupt_flag==1)
 	{
 		key_interrupt_flag=0;											//清除按键按下的标志
@@ -29,7 +30,8 @@ void Key_select(void)
 			case DOWN: ELE_PID_Direction.KpPos-=0.2f;break;
 			case MID: ELE_PID_Direction.KdPos-=0.2f;break;
 			case RIGHT: ELE_PID_Direction.KdPos+=0.2f;break;
-			
+			case KEY1: g_right_flag=!g_right_flag;OLED_P6x8Str(60,5,a);OLED_Print_Num1(80,5,g_right_flag);break;
+			case KEY2: have_enter_curve=curve_flag=0;break;
 		}		
 	}	
 }

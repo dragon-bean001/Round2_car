@@ -531,9 +531,9 @@ Section Cross References
     em.o(i.EM_store) refers to em.o(.data) for EM_right_value
     em.o(i.Round_Detect) refers to em.o(i.EM_mid_value_trend) for EM_mid_value_trend
     em.o(i.Round_Detect) refers to seekfree_oled.o(i.OLED_Print_Num1) for OLED_Print_Num1
+    em.o(i.Round_Detect) refers to mk60_systick.o(i.systick_delay_ms) for systick_delay_ms
     em.o(i.Round_Detect) refers to motor.o(i.Motor12_speed) for Motor12_speed
     em.o(i.Round_Detect) refers to motor.o(i.Motor34_speed) for Motor34_speed
-    em.o(i.Round_Detect) refers to mk60_systick.o(i.systick_delay_ms) for systick_delay_ms
     em.o(i.Round_Detect) refers to em.o(.data) for curve_flag
     motor.o(i.Motor12_speed) refers to mk60_ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
     motor.o(i.Motor34_speed) refers to mk60_ftm.o(i.ftm_pwm_duty) for ftm_pwm_duty
@@ -1338,55 +1338,55 @@ Image Symbol Table
     i.PORTC_IRQHandler                       0x00001694   Section        0  isr.o(i.PORTC_IRQHandler)
     i.PORTD_IRQHandler                       0x000016a8   Section        0  isr.o(i.PORTD_IRQHandler)
     i.Round_Detect                           0x000016fc   Section        0  em.o(i.Round_Detect)
-    i.SYSTEM_CLK                             0x00001744   Section        0  system_mk66.o(i.SYSTEM_CLK)
-    i.Start                                  0x000017fc   Section        0  system_mk66.o(i.Start)
-    i.UART3_RX_TX_IRQHandler                 0x00001824   Section        0  isr.o(i.UART3_RX_TX_IRQHandler)
-    i.UART4_RX_TX_IRQHandler                 0x00001840   Section        0  isr.o(i.UART4_RX_TX_IRQHandler)
-    i.VSYNC                                  0x00001850   Section        0  seekfree_mt9v032.o(i.VSYNC)
-    i.__0sprintf                             0x000018a8   Section        0  printfa.o(i.__0sprintf)
-    i.__scatterload_copy                     0x000018d0   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x000018de   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x000018e0   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._fp_digits                             0x000018f0   Section        0  printfa.o(i._fp_digits)
-    _fp_digits                               0x000018f1   Thumb Code   366  printfa.o(i._fp_digits)
-    i._printf_core                           0x00001a74   Section        0  printfa.o(i._printf_core)
-    _printf_core                             0x00001a75   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_post_padding                   0x00002150   Section        0  printfa.o(i._printf_post_padding)
-    _printf_post_padding                     0x00002151   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x00002174   Section        0  printfa.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x00002175   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._sputc                                 0x000021a2   Section        0  printfa.o(i._sputc)
-    _sputc                                   0x000021a3   Thumb Code    10  printfa.o(i._sputc)
-    i.adc_init                               0x000021ac   Section        0  mk60_adc.o(i.adc_init)
-    i.adc_once                               0x0000235c   Section        0  mk60_adc.o(i.adc_once)
-    i.adc_start                              0x000023a8   Section        0  mk60_adc.o(i.adc_start)
-    i.div_set                                0x000023e0   Section        0  system_mk66.o(i.div_set)
-    i.ftm_pwm_duty                           0x0000242c   Section        0  mk60_ftm.o(i.ftm_pwm_duty)
-    i.ftm_pwm_init                           0x000024ac   Section        0  mk60_ftm.o(i.ftm_pwm_init)
-    i.get_clk                                0x000025e0   Section        0  common.o(i.get_clk)
-    i.gpio_get                               0x00002654   Section        0  mk60_gpio.o(i.gpio_get)
-    i.gpio_init                              0x00002680   Section        0  mk60_gpio.o(i.gpio_init)
-    i.gpio_set                               0x00002754   Section        0  mk60_gpio.o(i.gpio_set)
-    i.gpio_turn                              0x0000279c   Section        0  mk60_gpio.o(i.gpio_turn)
-    i.main                                   0x000027c4   Section        0  main.o(i.main)
-    i.mt9v032_cof_uart_interrupt             0x00002838   Section        0  seekfree_mt9v032.o(i.mt9v032_cof_uart_interrupt)
-    i.port_init                              0x00002888   Section        0  mk60_port.o(i.port_init)
-    i.port_init_NoAlt                        0x000028fc   Section        0  mk60_port.o(i.port_init_NoAlt)
-    i.row_finished                           0x00002950   Section        0  seekfree_mt9v032.o(i.row_finished)
-    i.systick_delay                          0x0000295c   Section        0  mk60_systick.o(i.systick_delay)
-    i.systick_delay_ms                       0x00002988   Section        0  mk60_systick.o(i.systick_delay_ms)
-    i.uart_getchar                           0x000029ac   Section        0  mk60_uart.o(i.uart_getchar)
-    i.uart_init                              0x000029d0   Section        0  mk60_uart.o(i.uart_init)
-    .constdata                               0x00002ba8   Section        8  mk60_adc.o(.constdata)
-    .constdata                               0x00002bb0   Section       16  mk60_ftm.o(.constdata)
-    FTMX                                     0x00002bb0   Data          16  mk60_ftm.o(.constdata)
-    .constdata                               0x00002bc0   Section       40  mk60_gpio.o(.constdata)
-    PORTX                                    0x00002bc0   Data          20  mk60_gpio.o(.constdata)
-    GPIOX                                    0x00002bd4   Data          20  mk60_gpio.o(.constdata)
-    .constdata                               0x00002be8   Section       40  mk60_port.o(.constdata)
-    PORTX                                    0x00002be8   Data          20  mk60_port.o(.constdata)
-    GPIOX                                    0x00002bfc   Data          20  mk60_port.o(.constdata)
-    .constdata                               0x00002c10   Section     2072  seekfree_oled.o(.constdata)
+    i.SYSTEM_CLK                             0x0000174c   Section        0  system_mk66.o(i.SYSTEM_CLK)
+    i.Start                                  0x00001804   Section        0  system_mk66.o(i.Start)
+    i.UART3_RX_TX_IRQHandler                 0x0000182c   Section        0  isr.o(i.UART3_RX_TX_IRQHandler)
+    i.UART4_RX_TX_IRQHandler                 0x00001848   Section        0  isr.o(i.UART4_RX_TX_IRQHandler)
+    i.VSYNC                                  0x00001858   Section        0  seekfree_mt9v032.o(i.VSYNC)
+    i.__0sprintf                             0x000018b0   Section        0  printfa.o(i.__0sprintf)
+    i.__scatterload_copy                     0x000018d8   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000018e6   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000018e8   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._fp_digits                             0x000018f8   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x000018f9   Thumb Code   366  printfa.o(i._fp_digits)
+    i._printf_core                           0x00001a7c   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x00001a7d   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x00002158   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x00002159   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x0000217c   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x0000217d   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._sputc                                 0x000021aa   Section        0  printfa.o(i._sputc)
+    _sputc                                   0x000021ab   Thumb Code    10  printfa.o(i._sputc)
+    i.adc_init                               0x000021b4   Section        0  mk60_adc.o(i.adc_init)
+    i.adc_once                               0x00002364   Section        0  mk60_adc.o(i.adc_once)
+    i.adc_start                              0x000023b0   Section        0  mk60_adc.o(i.adc_start)
+    i.div_set                                0x000023e8   Section        0  system_mk66.o(i.div_set)
+    i.ftm_pwm_duty                           0x00002434   Section        0  mk60_ftm.o(i.ftm_pwm_duty)
+    i.ftm_pwm_init                           0x000024b4   Section        0  mk60_ftm.o(i.ftm_pwm_init)
+    i.get_clk                                0x000025e8   Section        0  common.o(i.get_clk)
+    i.gpio_get                               0x0000265c   Section        0  mk60_gpio.o(i.gpio_get)
+    i.gpio_init                              0x00002688   Section        0  mk60_gpio.o(i.gpio_init)
+    i.gpio_set                               0x0000275c   Section        0  mk60_gpio.o(i.gpio_set)
+    i.gpio_turn                              0x000027a4   Section        0  mk60_gpio.o(i.gpio_turn)
+    i.main                                   0x000027cc   Section        0  main.o(i.main)
+    i.mt9v032_cof_uart_interrupt             0x00002840   Section        0  seekfree_mt9v032.o(i.mt9v032_cof_uart_interrupt)
+    i.port_init                              0x00002890   Section        0  mk60_port.o(i.port_init)
+    i.port_init_NoAlt                        0x00002904   Section        0  mk60_port.o(i.port_init_NoAlt)
+    i.row_finished                           0x00002958   Section        0  seekfree_mt9v032.o(i.row_finished)
+    i.systick_delay                          0x00002964   Section        0  mk60_systick.o(i.systick_delay)
+    i.systick_delay_ms                       0x00002990   Section        0  mk60_systick.o(i.systick_delay_ms)
+    i.uart_getchar                           0x000029b4   Section        0  mk60_uart.o(i.uart_getchar)
+    i.uart_init                              0x000029d8   Section        0  mk60_uart.o(i.uart_init)
+    .constdata                               0x00002bb0   Section        8  mk60_adc.o(.constdata)
+    .constdata                               0x00002bb8   Section       16  mk60_ftm.o(.constdata)
+    FTMX                                     0x00002bb8   Data          16  mk60_ftm.o(.constdata)
+    .constdata                               0x00002bc8   Section       40  mk60_gpio.o(.constdata)
+    PORTX                                    0x00002bc8   Data          20  mk60_gpio.o(.constdata)
+    GPIOX                                    0x00002bdc   Data          20  mk60_gpio.o(.constdata)
+    .constdata                               0x00002bf0   Section       40  mk60_port.o(.constdata)
+    PORTX                                    0x00002bf0   Data          20  mk60_port.o(.constdata)
+    GPIOX                                    0x00002c04   Data          20  mk60_port.o(.constdata)
+    .constdata                               0x00002c18   Section     2072  seekfree_oled.o(.constdata)
     .data                                    0x1fff0000   Section       12  common.o(.data)
     .data                                    0x1fff000c   Section        6  mk60_ftm.o(.data)
     .data                                    0x1fff0014   Section       20  mk60_uart.o(.data)
@@ -1616,45 +1616,45 @@ Image Symbol Table
     PORTA_IRQHandler                         0x0000167d   Thumb Code    18  isr.o(i.PORTA_IRQHandler)
     PORTC_IRQHandler                         0x00001695   Thumb Code    16  isr.o(i.PORTC_IRQHandler)
     PORTD_IRQHandler                         0x000016a9   Thumb Code    68  isr.o(i.PORTD_IRQHandler)
-    Round_Detect                             0x000016fd   Thumb Code    68  em.o(i.Round_Detect)
-    SYSTEM_CLK                               0x00001745   Thumb Code   170  system_mk66.o(i.SYSTEM_CLK)
-    Start                                    0x000017fd   Thumb Code    34  system_mk66.o(i.Start)
-    UART3_RX_TX_IRQHandler                   0x00001825   Thumb Code    22  isr.o(i.UART3_RX_TX_IRQHandler)
-    UART4_RX_TX_IRQHandler                   0x00001841   Thumb Code    10  isr.o(i.UART4_RX_TX_IRQHandler)
-    VSYNC                                    0x00001851   Thumb Code    72  seekfree_mt9v032.o(i.VSYNC)
-    __0sprintf                               0x000018a9   Thumb Code    34  printfa.o(i.__0sprintf)
-    __1sprintf                               0x000018a9   Thumb Code     0  printfa.o(i.__0sprintf)
-    __2sprintf                               0x000018a9   Thumb Code     0  printfa.o(i.__0sprintf)
-    __c89sprintf                             0x000018a9   Thumb Code     0  printfa.o(i.__0sprintf)
-    sprintf                                  0x000018a9   Thumb Code     0  printfa.o(i.__0sprintf)
-    __scatterload_copy                       0x000018d1   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x000018df   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x000018e1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    adc_init                                 0x000021ad   Thumb Code   426  mk60_adc.o(i.adc_init)
-    adc_once                                 0x0000235d   Thumb Code    70  mk60_adc.o(i.adc_once)
-    adc_start                                0x000023a9   Thumb Code    52  mk60_adc.o(i.adc_start)
-    div_set                                  0x000023e1   Thumb Code    68  system_mk66.o(i.div_set)
-    ftm_pwm_duty                             0x0000242d   Thumb Code   120  mk60_ftm.o(i.ftm_pwm_duty)
-    ftm_pwm_init                             0x000024ad   Thumb Code   296  mk60_ftm.o(i.ftm_pwm_init)
-    get_clk                                  0x000025e1   Thumb Code    94  common.o(i.get_clk)
-    gpio_get                                 0x00002655   Thumb Code    38  mk60_gpio.o(i.gpio_get)
-    gpio_init                                0x00002681   Thumb Code   200  mk60_gpio.o(i.gpio_init)
-    gpio_set                                 0x00002755   Thumb Code    66  mk60_gpio.o(i.gpio_set)
-    gpio_turn                                0x0000279d   Thumb Code    34  mk60_gpio.o(i.gpio_turn)
-    main                                     0x000027c5   Thumb Code   104  main.o(i.main)
-    mt9v032_cof_uart_interrupt               0x00002839   Thumb Code    68  seekfree_mt9v032.o(i.mt9v032_cof_uart_interrupt)
-    port_init                                0x00002889   Thumb Code   102  mk60_port.o(i.port_init)
-    port_init_NoAlt                          0x000028fd   Thumb Code    76  mk60_port.o(i.port_init_NoAlt)
-    row_finished                             0x00002951   Thumb Code     8  seekfree_mt9v032.o(i.row_finished)
-    systick_delay                            0x0000295d   Thumb Code    44  mk60_systick.o(i.systick_delay)
-    systick_delay_ms                         0x00002989   Thumb Code    32  mk60_systick.o(i.systick_delay_ms)
-    uart_getchar                             0x000029ad   Thumb Code    30  mk60_uart.o(i.uart_getchar)
-    uart_init                                0x000029d1   Thumb Code   452  mk60_uart.o(i.uart_init)
-    ADCX                                     0x00002ba8   Data           8  mk60_adc.o(.constdata)
-    F6x8                                     0x00002c10   Data         552  seekfree_oled.o(.constdata)
-    F8X16                                    0x00002e38   Data        1520  seekfree_oled.o(.constdata)
-    Region$$Table$$Base                      0x00003428   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00003448   Number         0  anon$$obj.o(Region$$Table)
+    Round_Detect                             0x000016fd   Thumb Code    74  em.o(i.Round_Detect)
+    SYSTEM_CLK                               0x0000174d   Thumb Code   170  system_mk66.o(i.SYSTEM_CLK)
+    Start                                    0x00001805   Thumb Code    34  system_mk66.o(i.Start)
+    UART3_RX_TX_IRQHandler                   0x0000182d   Thumb Code    22  isr.o(i.UART3_RX_TX_IRQHandler)
+    UART4_RX_TX_IRQHandler                   0x00001849   Thumb Code    10  isr.o(i.UART4_RX_TX_IRQHandler)
+    VSYNC                                    0x00001859   Thumb Code    72  seekfree_mt9v032.o(i.VSYNC)
+    __0sprintf                               0x000018b1   Thumb Code    34  printfa.o(i.__0sprintf)
+    __1sprintf                               0x000018b1   Thumb Code     0  printfa.o(i.__0sprintf)
+    __2sprintf                               0x000018b1   Thumb Code     0  printfa.o(i.__0sprintf)
+    __c89sprintf                             0x000018b1   Thumb Code     0  printfa.o(i.__0sprintf)
+    sprintf                                  0x000018b1   Thumb Code     0  printfa.o(i.__0sprintf)
+    __scatterload_copy                       0x000018d9   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000018e7   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000018e9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    adc_init                                 0x000021b5   Thumb Code   426  mk60_adc.o(i.adc_init)
+    adc_once                                 0x00002365   Thumb Code    70  mk60_adc.o(i.adc_once)
+    adc_start                                0x000023b1   Thumb Code    52  mk60_adc.o(i.adc_start)
+    div_set                                  0x000023e9   Thumb Code    68  system_mk66.o(i.div_set)
+    ftm_pwm_duty                             0x00002435   Thumb Code   120  mk60_ftm.o(i.ftm_pwm_duty)
+    ftm_pwm_init                             0x000024b5   Thumb Code   296  mk60_ftm.o(i.ftm_pwm_init)
+    get_clk                                  0x000025e9   Thumb Code    94  common.o(i.get_clk)
+    gpio_get                                 0x0000265d   Thumb Code    38  mk60_gpio.o(i.gpio_get)
+    gpio_init                                0x00002689   Thumb Code   200  mk60_gpio.o(i.gpio_init)
+    gpio_set                                 0x0000275d   Thumb Code    66  mk60_gpio.o(i.gpio_set)
+    gpio_turn                                0x000027a5   Thumb Code    34  mk60_gpio.o(i.gpio_turn)
+    main                                     0x000027cd   Thumb Code   104  main.o(i.main)
+    mt9v032_cof_uart_interrupt               0x00002841   Thumb Code    68  seekfree_mt9v032.o(i.mt9v032_cof_uart_interrupt)
+    port_init                                0x00002891   Thumb Code   102  mk60_port.o(i.port_init)
+    port_init_NoAlt                          0x00002905   Thumb Code    76  mk60_port.o(i.port_init_NoAlt)
+    row_finished                             0x00002959   Thumb Code     8  seekfree_mt9v032.o(i.row_finished)
+    systick_delay                            0x00002965   Thumb Code    44  mk60_systick.o(i.systick_delay)
+    systick_delay_ms                         0x00002991   Thumb Code    32  mk60_systick.o(i.systick_delay_ms)
+    uart_getchar                             0x000029b5   Thumb Code    30  mk60_uart.o(i.uart_getchar)
+    uart_init                                0x000029d9   Thumb Code   452  mk60_uart.o(i.uart_init)
+    ADCX                                     0x00002bb0   Data           8  mk60_adc.o(.constdata)
+    F6x8                                     0x00002c18   Data         552  seekfree_oled.o(.constdata)
+    F8X16                                    0x00002e40   Data        1520  seekfree_oled.o(.constdata)
+    Region$$Table$$Base                      0x00003430   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003450   Number         0  anon$$obj.o(Region$$Table)
     mcgout_clk_mhz                           0x1fff0000   Data           4  common.o(.data)
     core_clk_mhz                             0x1fff0004   Data           4  common.o(.data)
     bus_clk_mhz                              0x1fff0008   Data           4  common.o(.data)
@@ -1696,9 +1696,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000411
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000034e4, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000034ec, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003448, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003450, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1761,63 +1761,63 @@ Memory Map of the image
     0x0000167c   0x0000167c   0x00000018   Code   RO          991    i.PORTA_IRQHandler  isr.o
     0x00001694   0x00001694   0x00000014   Code   RO          992    i.PORTC_IRQHandler  isr.o
     0x000016a8   0x000016a8   0x00000054   Code   RO          993    i.PORTD_IRQHandler  isr.o
-    0x000016fc   0x000016fc   0x00000048   Code   RO         2191    i.Round_Detect      em.o
-    0x00001744   0x00001744   0x000000b8   Code   RO           17    i.SYSTEM_CLK        system_mk66.o
-    0x000017fc   0x000017fc   0x00000028   Code   RO           18    i.Start             system_mk66.o
-    0x00001824   0x00001824   0x0000001c   Code   RO          994    i.UART3_RX_TX_IRQHandler  isr.o
-    0x00001840   0x00001840   0x00000010   Code   RO          995    i.UART4_RX_TX_IRQHandler  isr.o
-    0x00001850   0x00001850   0x00000058   Code   RO         1497    i.VSYNC             seekfree_mt9v032.o
-    0x000018a8   0x000018a8   0x00000028   Code   RO         2559    i.__0sprintf        mc_w.l(printfa.o)
-    0x000018d0   0x000018d0   0x0000000e   Code   RO         2661    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000018de   0x000018de   0x00000002   Code   RO         2662    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000018e0   0x000018e0   0x0000000e   Code   RO         2663    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x000018ee   0x000018ee   0x00000002   PAD
-    0x000018f0   0x000018f0   0x00000184   Code   RO         2564    i._fp_digits        mc_w.l(printfa.o)
-    0x00001a74   0x00001a74   0x000006dc   Code   RO         2565    i._printf_core      mc_w.l(printfa.o)
-    0x00002150   0x00002150   0x00000024   Code   RO         2566    i._printf_post_padding  mc_w.l(printfa.o)
-    0x00002174   0x00002174   0x0000002e   Code   RO         2567    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x000021a2   0x000021a2   0x0000000a   Code   RO         2569    i._sputc            mc_w.l(printfa.o)
-    0x000021ac   0x000021ac   0x000001b0   Code   RO          151    i.adc_init          mk60_adc.o
-    0x0000235c   0x0000235c   0x0000004c   Code   RO          152    i.adc_once          mk60_adc.o
-    0x000023a8   0x000023a8   0x00000038   Code   RO          153    i.adc_start         mk60_adc.o
-    0x000023e0   0x000023e0   0x0000004c   Code   RO           19    i.div_set           system_mk66.o
-    0x0000242c   0x0000242c   0x00000080   Code   RO          341    i.ftm_pwm_duty      mk60_ftm.o
-    0x000024ac   0x000024ac   0x00000134   Code   RO          343    i.ftm_pwm_init      mk60_ftm.o
-    0x000025e0   0x000025e0   0x00000074   Code   RO          105    i.get_clk           common.o
-    0x00002654   0x00002654   0x0000002c   Code   RO          423    i.gpio_get          mk60_gpio.o
-    0x00002680   0x00002680   0x000000d4   Code   RO          424    i.gpio_init         mk60_gpio.o
-    0x00002754   0x00002754   0x00000048   Code   RO          425    i.gpio_set          mk60_gpio.o
-    0x0000279c   0x0000279c   0x00000028   Code   RO          426    i.gpio_turn         mk60_gpio.o
-    0x000027c4   0x000027c4   0x00000074   Code   RO         1115    i.main              main.o
-    0x00002838   0x00002838   0x00000050   Code   RO         1501    i.mt9v032_cof_uart_interrupt  seekfree_mt9v032.o
-    0x00002888   0x00002888   0x00000074   Code   RO          604    i.port_init         mk60_port.o
-    0x000028fc   0x000028fc   0x00000054   Code   RO          605    i.port_init_NoAlt   mk60_port.o
-    0x00002950   0x00002950   0x0000000c   Code   RO         1502    i.row_finished      seekfree_mt9v032.o
-    0x0000295c   0x0000295c   0x0000002c   Code   RO          802    i.systick_delay     mk60_systick.o
-    0x00002988   0x00002988   0x00000024   Code   RO          803    i.systick_delay_ms  mk60_systick.o
-    0x000029ac   0x000029ac   0x00000024   Code   RO          846    i.uart_getchar      mk60_uart.o
-    0x000029d0   0x000029d0   0x000001d8   Code   RO          847    i.uart_init         mk60_uart.o
-    0x00002ba8   0x00002ba8   0x00000008   Data   RO          155    .constdata          mk60_adc.o
-    0x00002bb0   0x00002bb0   0x00000010   Data   RO          347    .constdata          mk60_ftm.o
-    0x00002bc0   0x00002bc0   0x00000028   Data   RO          427    .constdata          mk60_gpio.o
-    0x00002be8   0x00002be8   0x00000028   Data   RO          606    .constdata          mk60_port.o
-    0x00002c10   0x00002c10   0x00000818   Data   RO         1674    .constdata          seekfree_oled.o
-    0x00003428   0x00003428   0x00000020   Data   RO         2659    Region$$Table       anon$$obj.o
+    0x000016fc   0x000016fc   0x00000050   Code   RO         2191    i.Round_Detect      em.o
+    0x0000174c   0x0000174c   0x000000b8   Code   RO           17    i.SYSTEM_CLK        system_mk66.o
+    0x00001804   0x00001804   0x00000028   Code   RO           18    i.Start             system_mk66.o
+    0x0000182c   0x0000182c   0x0000001c   Code   RO          994    i.UART3_RX_TX_IRQHandler  isr.o
+    0x00001848   0x00001848   0x00000010   Code   RO          995    i.UART4_RX_TX_IRQHandler  isr.o
+    0x00001858   0x00001858   0x00000058   Code   RO         1497    i.VSYNC             seekfree_mt9v032.o
+    0x000018b0   0x000018b0   0x00000028   Code   RO         2559    i.__0sprintf        mc_w.l(printfa.o)
+    0x000018d8   0x000018d8   0x0000000e   Code   RO         2661    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000018e6   0x000018e6   0x00000002   Code   RO         2662    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000018e8   0x000018e8   0x0000000e   Code   RO         2663    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000018f6   0x000018f6   0x00000002   PAD
+    0x000018f8   0x000018f8   0x00000184   Code   RO         2564    i._fp_digits        mc_w.l(printfa.o)
+    0x00001a7c   0x00001a7c   0x000006dc   Code   RO         2565    i._printf_core      mc_w.l(printfa.o)
+    0x00002158   0x00002158   0x00000024   Code   RO         2566    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0000217c   0x0000217c   0x0000002e   Code   RO         2567    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000021aa   0x000021aa   0x0000000a   Code   RO         2569    i._sputc            mc_w.l(printfa.o)
+    0x000021b4   0x000021b4   0x000001b0   Code   RO          151    i.adc_init          mk60_adc.o
+    0x00002364   0x00002364   0x0000004c   Code   RO          152    i.adc_once          mk60_adc.o
+    0x000023b0   0x000023b0   0x00000038   Code   RO          153    i.adc_start         mk60_adc.o
+    0x000023e8   0x000023e8   0x0000004c   Code   RO           19    i.div_set           system_mk66.o
+    0x00002434   0x00002434   0x00000080   Code   RO          341    i.ftm_pwm_duty      mk60_ftm.o
+    0x000024b4   0x000024b4   0x00000134   Code   RO          343    i.ftm_pwm_init      mk60_ftm.o
+    0x000025e8   0x000025e8   0x00000074   Code   RO          105    i.get_clk           common.o
+    0x0000265c   0x0000265c   0x0000002c   Code   RO          423    i.gpio_get          mk60_gpio.o
+    0x00002688   0x00002688   0x000000d4   Code   RO          424    i.gpio_init         mk60_gpio.o
+    0x0000275c   0x0000275c   0x00000048   Code   RO          425    i.gpio_set          mk60_gpio.o
+    0x000027a4   0x000027a4   0x00000028   Code   RO          426    i.gpio_turn         mk60_gpio.o
+    0x000027cc   0x000027cc   0x00000074   Code   RO         1115    i.main              main.o
+    0x00002840   0x00002840   0x00000050   Code   RO         1501    i.mt9v032_cof_uart_interrupt  seekfree_mt9v032.o
+    0x00002890   0x00002890   0x00000074   Code   RO          604    i.port_init         mk60_port.o
+    0x00002904   0x00002904   0x00000054   Code   RO          605    i.port_init_NoAlt   mk60_port.o
+    0x00002958   0x00002958   0x0000000c   Code   RO         1502    i.row_finished      seekfree_mt9v032.o
+    0x00002964   0x00002964   0x0000002c   Code   RO          802    i.systick_delay     mk60_systick.o
+    0x00002990   0x00002990   0x00000024   Code   RO          803    i.systick_delay_ms  mk60_systick.o
+    0x000029b4   0x000029b4   0x00000024   Code   RO          846    i.uart_getchar      mk60_uart.o
+    0x000029d8   0x000029d8   0x000001d8   Code   RO          847    i.uart_init         mk60_uart.o
+    0x00002bb0   0x00002bb0   0x00000008   Data   RO          155    .constdata          mk60_adc.o
+    0x00002bb8   0x00002bb8   0x00000010   Data   RO          347    .constdata          mk60_ftm.o
+    0x00002bc8   0x00002bc8   0x00000028   Data   RO          427    .constdata          mk60_gpio.o
+    0x00002bf0   0x00002bf0   0x00000028   Data   RO          606    .constdata          mk60_port.o
+    0x00002c18   0x00002c18   0x00000818   Data   RO         1674    .constdata          seekfree_oled.o
+    0x00003430   0x00003430   0x00000020   Data   RO         2659    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff0000, Load base: 0x00003448, Size: 0x00005d30, Max: 0x00040000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff0000, Load base: 0x00003450, Size: 0x00005d30, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff0000   0x00003448   0x0000000c   Data   RW          106    .data               common.o
-    0x1fff000c   0x00003454   0x00000006   Data   RW          348    .data               mk60_ftm.o
-    0x1fff0012   0x0000345a   0x00000002   PAD
-    0x1fff0014   0x0000345c   0x00000014   Data   RW          856    .data               mk60_uart.o
-    0x1fff0028   0x00003470   0x0000004d   Data   RW         1507    .data               seekfree_mt9v032.o
-    0x1fff0075   0x000034bd   0x00000003   PAD
-    0x1fff0078   0x000034c0   0x0000001e   Data   RW         2193    .data               em.o
-    0x1fff0096   0x000034de   0x00000003   Data   RW         2285    .data               key.o
-    0x1fff0099   0x000034e1   0x00000003   PAD
+    0x1fff0000   0x00003450   0x0000000c   Data   RW          106    .data               common.o
+    0x1fff000c   0x0000345c   0x00000006   Data   RW          348    .data               mk60_ftm.o
+    0x1fff0012   0x00003462   0x00000002   PAD
+    0x1fff0014   0x00003464   0x00000014   Data   RW          856    .data               mk60_uart.o
+    0x1fff0028   0x00003478   0x0000004d   Data   RW         1507    .data               seekfree_mt9v032.o
+    0x1fff0075   0x000034c5   0x00000003   PAD
+    0x1fff0078   0x000034c8   0x0000001e   Data   RW         2193    .data               em.o
+    0x1fff0096   0x000034e6   0x00000003   Data   RW         2285    .data               key.o
+    0x1fff0099   0x000034e9   0x00000003   PAD
     0x1fff009c        -       0x00005820   Zero   RW         1506    .bss                seekfree_mt9v032.o
     0x1fff58bc        -       0x00000074   Zero   RW         2192    .bss                em.o
     0x1fff5930        -       0x00000400   Zero   RW            1    STACK               startup_mk66f18.o
@@ -1831,7 +1831,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        116         22          0         12          0       2908   common.o
-      1536        128          0         30        116       6630   em.o
+      1544        130          0         30        116       6634   em.o
        224         48          0          0          0       3759   isr.o
        272         38          0          3          0      26529   key.o
        116         12          0          0          0        599   main.o
@@ -1848,7 +1848,7 @@ Image component sizes
        330         34          0          0          0     731110   system_mk66.o
 
     ----------------------------------------------------------------------
-      6392        566       3232        156      23700     806062   Object Totals
+      6400        568       3232        156      23700     806066   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          8          0          0   (incl. Padding)
 
@@ -1903,15 +1903,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10152        668       3232        156      23700     802346   Grand Totals
-     10152        668       3232        156      23700     802346   ELF Image Totals
-     10152        668       3232        156          0          0   ROM Totals
+     10160        670       3232        156      23700     802350   Grand Totals
+     10160        670       3232        156      23700     802350   ELF Image Totals
+     10160        670       3232        156          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                13384 (  13.07kB)
+    Total RO  Size (Code + RO Data)                13392 (  13.08kB)
     Total RW  Size (RW Data + ZI Data)             23856 (  23.30kB)
-    Total ROM Size (Code + RO Data + RW Data)      13540 (  13.22kB)
+    Total ROM Size (Code + RO Data + RW Data)      13548 (  13.23kB)
 
 ==============================================================================
 

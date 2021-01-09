@@ -368,7 +368,7 @@ void ftm_pwm_duty(FTMn ftmn, FTM_CHn ch, uint32 duty)
 
     case ftm1:
         cv = (duty * (period[ftmn] - 0 + 1)) / FTM1_PRECISON;
-        break;
+        break; 
 
     case ftm2:
         cv = (duty * (period[ftmn] - 0 + 1)) / FTM2_PRECISON;

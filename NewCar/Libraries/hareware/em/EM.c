@@ -141,9 +141,9 @@ void Round_Detect()
 	
 	if(curve_flag)
 	{
-		
-		Motor12_speed(STRAIGHT_INIT_SPEED+150,0);
-    Motor34_speed(STRAIGHT_INIT_SPEED-150,0);
+		systick_delay_ms(200);
+		Motor12_speed(STRAIGHT_INIT_SPEED+200,0);
+    Motor34_speed(STRAIGHT_INIT_SPEED-200,0);
 		systick_delay_ms(1000);
 		curve_flag=0;
 		
